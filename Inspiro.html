@@ -1,0 +1,21 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.ajax({
+                url: "https://inspirobot.me/api?generate=true",
+                type: "GET",
+                success: function (result) {
+                    console.log(result);
+                    $("#Inspiro").attr("src", result);
+                }
+            })
+        });
+
+    </script>
+</head>
+<body>
+<img id="Inspiro"/>
+</body>
+</html>
